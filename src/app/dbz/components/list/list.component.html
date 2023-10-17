@@ -2,8 +2,12 @@
 
 <ul class="list-group">
   <li
-    *ngFor="let character of characterList; index as i"
+    *ngFor="let character of characterList; index as i; last as isLast; even as isEven"
     class="list-group-item"
+    [ngClass]="{
+      'list-group-item-dark': isLast,
+      'list-group-item-primary': isEven,
+    }"
   >
     <span class="text-primary"> {{ i + 1 }}. </span>
     <span>{{ character.name }} - </span>
