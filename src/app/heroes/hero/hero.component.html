@@ -1,1 +1,18 @@
-<p>hero works!</p>
+<h1> {{ name }} </h1>
+
+<dl>
+  <td>Name:</td>
+  <dd> {{ name }} </dd>
+
+  <td>Age:</td>
+  <dd> {{ age }} </dd>
+
+  <td>Method:</td>
+  <dd> {{ getHeroDescription() }} </dd>
+
+  <td>Uppercase:</td>
+  <dd> {{ capitalizedName }} </dd>
+</dl>
+
+<button (click)="changeHero()" class="btn btn-primary mx-2">Change name</button>
+<button (click)="changeAge()" class="btn btn-primary">Change age</button>
