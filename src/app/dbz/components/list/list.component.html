@@ -2,10 +2,11 @@
 
 <ul class="list-group">
   <li
-    *ngFor="let character of characterList"
+    *ngFor="let character of characterList; index as i"
     class="list-group-item"
   >
-    <span>{{ character.name }} </span>
+    <span class="text-primary"> {{ i + 1 }}. </span>
+    <span>{{ character.name }} - </span>
     <strong>power: </strong>
     <span>{{ character.power }}</span>
   </li>
