@@ -1,6 +1,6 @@
 <h4>Add character</h4>
 
-<form class="row">
+<form class="row" (ngSubmit)="emitCharacter()">
   <input
     type="text"
     [(ngModel)]="character.name"
@@ -17,7 +17,7 @@
     placeholder="Power"
   >
 
-  <button type="submit" class="btn btn-primary" (click)="emitCharacter()">Add</button>
+  <button type="submit" class="btn btn-primary">Add</button>
 
   <pre>{{ character | json }}</pre>
 </form>
