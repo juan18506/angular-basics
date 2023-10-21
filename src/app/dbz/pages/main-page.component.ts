@@ -18,7 +18,11 @@ export class MainPageComponent {
     power: 7500,
   }];
 
-  onNewCharacter( character: Character ): void {
-    console.log(character);
+  onNewCharacter(character: Character): void {
+    this.characters.push(character);
+  }
+
+  onDeletedCharacter(index: number): void {
+    this.characters.splice(index, 1);
   }
 }
